@@ -82,11 +82,27 @@
   </a-entity>
 
   <!-- VR CONTROLLERS -->
-  <a-entity id="leftHand" laser-controls="hand: left" raycaster="showLine: false">
+  <a-entity id="leftHand"<a-entity id="leftHand"
+  tracked-controls="hand: left"
+  hand-controls="hand: left; handModelStyle: lowPoly; color: #2196ff">
+</a-entity>
+
+<a-entity id="rightHand"
+  tracked-controls="hand: right"
+  hand-controls="hand: right; handModelStyle: lowPoly; color: #2196ff">
+</a-entity>="hand: left" raycaster="showLine: false">
   <a-sphere radius="0.12" color="#2196ff"></a-sphere>
 </a-entity>
 
-<a-entity id="rightHand" laser-controls="hand: right" raycaster="showLine: false">
+<a-entity id="rightHand"<a-entity id="leftHand"
+  tracked-controls="hand: left"
+  hand-controls="hand: left; handModelStyle: lowPoly; color: #2196ff">
+</a-entity>
+
+<a-entity id="rightHand"
+  tracked-controls="hand: right"
+  hand-controls="hand: right; handModelStyle: lowPoly; color: #2196ff">
+</a-entity>="hand: right" raycaster="showLine: false">
   <a-sphere radius="0.12" color="#2196ff"></a-sphere>
 </a-entity>
 
