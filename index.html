@@ -82,8 +82,9 @@
   </a-entity>
 
   <!-- VR CONTROLLERS -->
-  <a-entity id="leftHand" hand-tracking-controls="hand: left"></a-entity>
-<a-entity id="rightHand" hand-tracking-controls="hand: right"></a-entity>
+  <a-entity id="leftHand" laser-controls="hand: left" raycaster="showLine: false"></a-entity>
+
+<a-entity id="rightHand" laser-controls="hand: right" raycaster="showLine: false"></a-entity>
 
 </a-scene>
 </body>
