@@ -82,9 +82,13 @@
   </a-entity>
 
   <!-- VR CONTROLLERS -->
-  <a-entity id="leftHand" laser-controls="hand: left" raycaster="showLine: false"></a-entity>
+  <a-entity id="leftHand" laser-controls="hand: left" raycaster="showLine: false">
+  <a-sphere radius="0.12" color="#2196ff"></a-sphere>
+</a-entity>
 
-<a-entity id="rightHand" laser-controls="hand: right" raycaster="showLine: false"></a-entity>
+<a-entity id="rightHand" laser-controls="hand: right" raycaster="showLine: false">
+  <a-sphere radius="0.12" color="#2196ff"></a-sphere>
+</a-entity>
 
 </a-scene>
 </body>
