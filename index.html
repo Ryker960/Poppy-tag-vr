@@ -1,24 +1,233 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Poppy Tag VR - Toy Factory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Poppy Tag VR</title>
+
   <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+
+  <style>
+    body { margin: 0; }
+    #title {
+      position: fixed;
+      z-index: 10;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-family: Arial;
+      font-size: 20px;
+      pointer-events: none;
+      text-shadow: 2px 2px 5px black;
+    }
+  </style>
 </head>
+
 <body>
-<a-scene background="color: #202b38">
-  <a-box position="0 1.5 -4" width="8" height="3" depth="0.2" color="#444"></a-box>
-  <a-box position="0 0 -4" width="8" height="0.2" depth="8" color="#555"></a-box>
-  <a-box position="0 3 -4" width="8" height="0.2" depth="8" color="#222"></a-box>
 
-  <a-box position="-3 1 -3" color="#e52b38"></a-box>
-  <a-box position="3 1 -3" color="#2676db"></a-box>
+<div id="title">POPPY TAG VR - CHAPTER 1</div>
 
-  <a-entity position="0 1.6 0">
-    <a-camera></a-camera>
+<a-scene
+  background="color: #252b36"
+  fog="type: linear; color: #252b36; near: 12; far: 65"
+  shadow="type: pcfsoft"
+  renderer="antialias: true">
+
+  <!-- LIGHTING -->
+  <a-entity light="type: ambient; intensity: 0.7"></a-entity>
+  <a-entity light="type: directional; intensity: 1"
+            position="-5 10 5"></a-entity>
+
+  <!-- FACTORY FLOOR -->
+  <a-box position="0 -0.2 -12"
+         width="30" height="0.4" depth="45"
+         color="#45484d"
+         shadow></a-box>
+
+  <!-- FACTORY WALLS -->
+  <a-box position="-15 4 -12"
+         width="0.5" height="8" depth="45"
+         color="#343b48"></a-box>
+
+  <a-box position="15 4 -12"
+         width="0.5" height="8" depth="45"
+         color="#343b48"></a-box>
+
+  <a-box position="0 4 -34"
+         width="30" height="8" depth="0.5"
+         color="#343b48"></a-box>
+
+  <a-box position="0 4 10"
+         width="30" height="8" depth="0.5"
+         color="#343b48"></a-box>
+
+  <!-- CEILING -->
+  <a-box position="0 8 -12"
+         width="30" height="0.5" depth="45"
+         color="#252a32"></a-box>
+
+  <!-- FACTORY SUPPORTS -->
+  <a-box position="-8 4 -5" width="0.6" height="8"
+         depth="0.6" color="#69717b"></a-box>
+  <a-box position="8 4 -5" width="0.6" height="8"
+         depth="0.6" color="#69717b"></a-box>
+  <a-box position="-8 4 -20" width="0.6" height="8"
+         depth="0.6" color="#69717b"></a-box>
+  <a-box position="8 4 -20" width="0.6" height="8"
+         depth="0.6" color="#69717b"></a-box>
+
+  <!-- LIGHTS -->
+  <a-box position="0 7.7 -5" width="5" height="0.15"
+         depth="0.5" color="#fff0b0"
+         material="emissive: #fff0b0; emissiveIntensity: 1"></a-box>
+
+  <a-box position="0 7.7 -17" width="5" height="0.15"
+         depth="0.5" color="#fff0b0"
+         material="emissive: #fff0b0; emissiveIntensity: 1"></a-box>
+
+  <a-box position="0 7.7 -28" width="5" height="0.15"
+         depth="0.5" color="#fff0b0"
+         material="emissive: #fff0b0; emissiveIntensity: 1"></a-box>
+
+  <!-- ENTRANCE SIGN -->
+  <a-box position="0 6 -3"
+         width="9" height="1.5" depth="0.3"
+         color="#c51d32"></a-box>
+
+  <a-text value="PLAYTIME CO."
+          position="-3.1 6 -2.8"
+          width="7"
+          color="#ffffff"></a-text>
+
+  <!-- CONVEYOR BELT -->
+  <a-box position="-5 1 -15"
+         width="4" height="0.5" depth="12"
+         color="#20252b"></a-box>
+
+  <a-box position="-5 1.3 -15"
+         width="3.6" height="0.15" depth="11.5"
+         color="#777c83"></a-box>
+
+  <!-- CONVEYOR TOYS -->
+  <a-box position="-5 1.8 -11"
+         color="#e62c39" width="1" height="1"
+         depth="1"></a-box>
+
+  <a-box position="-5 1.8 -15"
+         color="#287be0" width="1" height="1"
+         depth="1"></a-box>
+
+  <a-box position="-5 1.8 -19"
+         color="#e9bd31" width="1" height="1"
+         depth="1"></a-box>
+
+  <!-- HUGGY-INSPIRED BLUE FACTORY MASCOT -->
+  <a-entity position="0 0 -27">
+
+    <!-- BODY -->
+    <a-sphere position="0 2.1 0"
+              radius="0.75"
+              color="#0876d8"></a-sphere>
+
+    <!-- HEAD -->
+    <a-sphere position="0 3.5 0"
+              radius="1"
+              color="#0876d8"></a-sphere>
+
+    <!-- EYES -->
+    <a-sphere position="-0.35 3.7 0.85"
+              radius="0.16" color="white"></a-sphere>
+
+    <a-sphere position="0.35 3.7 0.85"
+              radius="0.16" color="white"></a-sphere>
+
+    <a-sphere position="-0.35 3.7 1"
+              radius="0.07" color="black"></a-sphere>
+
+    <a-sphere position="0.35 3.7 1"
+              radius="0.07" color="black"></a-sphere>
+
+    <!-- MOUTH -->
+    <a-box position="0 3.1 0.87"
+           width="0.7" height="0.2"
+           depth="0.1" color="#39101a"></a-box>
+
+    <!-- ARMS -->
+    <a-cylinder position="-1.1 2.1 0"
+                height="1.8" radius="0.22"
+                rotation="0 0 40"
+                color="#0876d8"></a-cylinder>
+
+    <a-cylinder position="1.1 2.1 0"
+                height="1.8" radius="0.22"
+                rotation="0 0 -40"
+                color="#0876d8"></a-cylinder>
+
+    <!-- LEGS -->
+    <a-cylinder position="-0.4 0.8 0"
+                height="1.4" radius="0.25"
+                color="#0876d8"></a-cylinder>
+
+    <a-cylinder position="0.4 0.8 0"
+                height="1.4" radius="0.25"
+                color="#0876d8"></a-cylinder>
+
   </a-entity>
 
-  <a-sky color="#182333"></a-sky>
+  <!-- SECURITY DOOR -->
+  <a-box position="9 2 -18"
+         width="0.4" height="4"
+         depth="4" color="#bd202c"></a-box>
+
+  <a-text value="SECURITY"
+          position="8.7 4.5 -18"
+          rotation="0 90 0"
+          color="white" width="5"></a-text>
+
+  <!-- STORAGE CRATES -->
+  <a-box position="5 1 -10"
+         width="2" height="2" depth="2"
+         color="#9b642f"></a-box>
+
+  <a-box position="7 1 -13"
+         width="2" height="2" depth="2"
+         color="#a77a42"></a-box>
+
+  <a-box position="5 1 -23"
+         width="2" height="2" depth="2"
+         color="#9b642f"></a-box>
+
+  <!-- PLAYER AND VR CAMERA -->
+  <a-entity id="player" position="0 0 3">
+
+    <a-camera
+      position="0 1.6 0"
+      look-controls
+      wasd-controls="acceleration: 20">
+
+      <a-cursor
+        color="#ffffff"
+        raycaster="objects: .interactable">
+      </a-cursor>
+
+    </a-camera>
+
+    <!-- VR CONTROLLERS -->
+    <a-entity
+      laser-controls="hand: left">
+    </a-entity>
+
+    <a-entity
+      laser-controls="hand: right">
+    </a-entity>
+
+  </a-entity>
+
+  <!-- SKY -->
+  <a-sky color="#252b36"></a-sky>
+
 </a-scene>
+
 </body>
 </html>
